@@ -39,13 +39,19 @@ function Comment (props) {
 
 function Counter() {
   const [count, setCount] = useState(0);
-  const increaseHandle = () => setCount(count + 1)
-  const decreaseHandle = () => setCount(count - 1)
+  const increaseHandle = () => setCount(count + 1);
+  const decreaseHandle = () => setCount(count - 1);
+
+  const buttonStyle = {
+    margin: '10px',
+    padding: '10px',
+    borderRadius: '7px'
+  }
   return(
-    <div>
+    <div style={{backgroundColor:'skyblue', margin: '20px', padding: '15px', border: '3px solid grey', borderRadius: '15px'}}>
       <h3>Count: {count} </h3>
-      <button onClick={increaseHandle}>Increase</button>
-      <button onClick={decreaseHandle}>Decrease</button>
+      <button style={buttonStyle} onClick={increaseHandle}>Increase</button>
+      <button style={buttonStyle} onClick={decreaseHandle}>Decrease</button>
     </div>
   )
 }
